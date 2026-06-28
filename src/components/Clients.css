@@ -1,0 +1,43 @@
+.clients {
+  padding: 40px 5%;
+  border-top: 1px solid #e8e7e3;
+  border-bottom: 1px solid #e8e7e3;
+  background: #f5f4f0;
+}
+
+.clients__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.clients__label {
+  font-size: 0.75rem;
+  color: #888;
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.clients__logos {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.clients__logo {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #aaa;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+  cursor: default;
+}
+
+.clients__logo:hover {
+  color: #111;
+}

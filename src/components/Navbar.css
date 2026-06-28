@@ -1,0 +1,141 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0 5%;
+  background: transparent;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.navbar--scrolled {
+  background: rgba(245, 244, 240, 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 #d9d8d4;
+}
+
+.navbar__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 68px;
+  gap: 2rem;
+}
+
+.navbar__logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111;
+  margin-right: auto;
+  letter-spacing: 0.05em;
+}
+
+.navbar__logo img {
+    width: 60px;      /* change size as needed */
+    height: 60px;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+
+.navbar__logo img:hover {
+    transform: scale(1.08);
+}
+
+.navbar__links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar__links a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #444;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.navbar__links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: #111;
+  transition: width 0.25s;
+}
+
+.navbar__links a:hover {
+  color: #111;
+}
+
+.navbar__links a:hover::after {
+  width: 100%;
+}
+
+.navbar__cta {
+  background: #111;
+  color: #fff;
+  padding: 0.55rem 1.2rem;
+  border-radius: 100px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.navbar__cta:hover {
+  opacity: 0.8;
+}
+
+.navbar__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.navbar__burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #111;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .navbar__burger {
+    display: flex;
+  }
+
+  .navbar__cta {
+    display: none;
+  }
+
+  .navbar__links {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: #f5f4f0;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 1.5rem;
+    transform: translateY(-130%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid #e8e7e3;
+  }
+
+  .navbar__links--open {
+    transform: translateY(0);
+  }
+}

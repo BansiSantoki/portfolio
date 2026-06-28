@@ -1,0 +1,140 @@
+.hero {
+  min-height: 100vh;
+  padding: 100px 5% 80px;
+  display: flex;
+  align-items: center;
+  background: #f5f4f0;
+}
+
+.hero__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 4rem;
+}
+
+.hero__content {
+  flex: 1;
+  max-width: 580px;
+}
+
+.hero__name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  color: #111;
+  margin-bottom: 1.4rem;
+  letter-spacing: -0.02em;
+}
+
+.hero__desc {
+  font-size: 1rem;
+  color: #555;
+  max-width: 420px;
+  line-height: 1.75;
+  margin-bottom: 1.8rem;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  border: 1.5px solid #111;
+  border-radius: 4px;
+  padding: 0.45rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero__badge-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: 0.03em;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ── Photo ── */
+.hero__image-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.hero__image-ring {
+  width: 360px;
+  height: 420px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  overflow: hidden;
+  border: 3px solid #e0dfd9;
+  background: #e8e7e3;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hero__floating-card {
+  position: absolute;
+  bottom: -18px;
+  left: -30px;
+  background: #fff;
+  border: 1px solid #e8e7e3;
+  border-radius: 12px;
+  padding: 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #333;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
+}
+
+.hero__floating-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px #dcfce7;
+}
+
+@media (max-width: 900px) {
+  .hero__inner {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .hero__image-ring {
+    width: 260px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 90px 5% 60px;
+  }
+
+  .hero__image-ring {
+    width: 220px;
+    height: 260px;
+  }
+
+  .hero__floating-card {
+    left: 0;
+    bottom: -14px;
+  }
+}
