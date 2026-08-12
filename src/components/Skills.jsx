@@ -10,9 +10,11 @@ const skills = [
   { name: 'Figma',       icon: '🎨' },
   { name: 'Kotlin',      icon: '🟣' },
   { name: 'JavaScript',  icon: '💛' },
+  { name: 'TypeScript',  icon: '🔷' },
   { name: 'MySQL',       icon: '🐬' },
   { name: 'HTML5',       icon: '🧱' },
   { name: 'CSS3',        icon: '🎀' },
+  { name: 'React Native', icon: '📱' },
 ]
 
 export default function Skills() {
